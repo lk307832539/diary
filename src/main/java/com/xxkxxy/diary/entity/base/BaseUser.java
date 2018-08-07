@@ -4,6 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import java.util.Date;
 
 /**
  * Created by LK on 2018/8/6.
@@ -12,7 +13,7 @@ import javax.persistence.MappedSuperclass;
 public abstract class BaseUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private Integer userId;
 
     private String userName;
     private String nikeName;
@@ -20,16 +21,17 @@ public abstract class BaseUser {
     private String salt;
     private String email;
     private String validateCode;
+    private Date birthday;
 
     public BaseUser() {
         super();
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -79,5 +81,13 @@ public abstract class BaseUser {
 
     public void setValidateCode(String validateCode) {
         this.validateCode = validateCode;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 }
