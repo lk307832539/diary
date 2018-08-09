@@ -83,12 +83,5 @@ public class LoginAct {
         subject.logout();
         return "index";
     }
-
-    /*@RequestMapping(value = "/loginout")
-    public String loginOut(SessionStatus sessionStatus, HttpSession session) {
-        sessionStatus.setComplete();// 将所有的会话注销
-        session.removeAttribute("user");
-        return "index";
-    }*/
 }
 
