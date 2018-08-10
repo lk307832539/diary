@@ -4,15 +4,17 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Created by LK on 2018/8/9.
+ * Created by LK on 2018/8/10.
  */
 @MappedSuperclass
-public abstract class BaseSingleFrame {
+public abstract class BaseDoubleFrame {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Date createTime;
+
+    private String title;
 
     @Column(columnDefinition = "TEXT")
     private String content;
@@ -33,6 +35,14 @@ public abstract class BaseSingleFrame {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getContent() {

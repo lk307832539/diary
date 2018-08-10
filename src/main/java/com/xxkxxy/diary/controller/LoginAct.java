@@ -36,7 +36,7 @@ public class LoginAct {
             String userName = subject.getPrincipal().toString();
             User user = userService.findByUserName(userName);
             session.setAttribute("user", user);
-            return "index/index";
+            return "index";
         } catch (Exception e) {
             model.addAttribute("message", e.getMessage());
             return "index/index";//返回登录页面
@@ -71,7 +71,7 @@ public class LoginAct {
             model.addAttribute("user", user);
         }
 
-        return "index/index";
+        return "index";
 
     }
 

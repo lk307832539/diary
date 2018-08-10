@@ -110,13 +110,13 @@ public class ShiroConfiguration {
 
         // 需要验证的写 authc 不需要的写 anon
 
-        filterChainDefinitionMap.put("/static/**", "anon");
-        filterChainDefinitionMap.put("/bootstrap4/**", "anon");
+//        filterChainDefinitionMap.put("/static/**", "anon");
+        filterChainDefinitionMap.put("/bower_components/**", "anon");
+        filterChainDefinitionMap.put("/plugins/**", "anon");
         filterChainDefinitionMap.put("/css/**", "anon");
-        filterChainDefinitionMap.put("/fontAwesome/**", "anon");
-        filterChainDefinitionMap.put("/images/**", "anon");
         filterChainDefinitionMap.put("/js/**", "anon");
-        filterChainDefinitionMap.put("/MDB/**", "anon");
+        filterChainDefinitionMap.put("/images/**", "anon");
+
         filterChainDefinitionMap.put("/upload/**", "anon");
         filterChainDefinitionMap.put("/ueditor/**", "anon");
 
